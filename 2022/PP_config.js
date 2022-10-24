@@ -49,20 +49,31 @@ var config_data = `
         },
         "required":"true"
       },
+       "Starting Point<br>(by terminal)": {
+        "code":"sp",
+        "title": "Starting Point (by terminal)",
+        "type":"radio",
+        "choices":{
+          "1":"Red-Red",
+          "2":"Blue-Red<br>",
+          "3":"Red-Blue",
+          "4":"Blue-Blue"
+        },
+        "required":"true"
+      },
       "Team #": {
         "code":"t",
         "type":"team",
         "min":1,
         "max":99999
-      },
-      "Auto Start Position (required)": {
-        "code":"as",
-        "title": "Auto Start Position",
-        "type":"field_image",
-        "filename":"2022/field_image.png"
       }
     },
     "auton": {
+      "Cones: Missed/Dropped": {
+        "code":"autocmss",
+        "title": "Cones: Missed/Dropped",
+        "type":"counter"
+      },
       "Cones: In Terminal": {
         "code":"autocit",
         "title": "Cones: In Terminal",
@@ -87,7 +98,7 @@ var config_data = `
         "code":"autochj",
         "title": "Cones: High Junction",
         "type":"counter"
-},
+      },
       "Parking Status": {
         "code":"autoparkstat",
         "title": "Parking Status",
@@ -111,6 +122,11 @@ var config_data = `
       }
     },
     "teleop": {
+      "Cones: Missed/Dropped": {
+        "code":"cmss",
+        "title": "Cones: Missed/Dropped",
+        "type":"counter"
+      },
       "Cones: In Terminal": {
         "code":"cit",
         "title": "Cones: In Terminal",
@@ -138,16 +154,41 @@ var config_data = `
       }
 },
     "endgame": {
-      "Owned Poles": {
-        "code":"endowned",
-        "title": "# of Owned Cones",
+      "Cones: Missed/Dropped": {
+        "code":"endcmss",
+        "title": "Cones: Missed/Dropped",
         "type":"counter"
-},
+      },
+      "Cones: In Terminal": {
+        "code":"endcit",
+        "title": "Cones: In Terminal",
+        "type":"counter"
+      },
+      "Cones: Ground Junction": {
+        "code":"endcgj",
+        "title": "Cones: Ground Junction",
+        "type":"counter"
+      },
+      "Cones: Low Junction": {
+        "code":"endclj",
+        "title": "Cones: Low Junction",
+        "type":"counter"
+      },
+      "Cones: Medium Junction": {
+        "code":"endcmj",
+        "title": "Cones: Medium Junction",
+        "type":"counter"
+      },
+      "Cones: High Junction": {
+        "code":"endchj",
+        "title": "Cones: High Junction",
+        "type":"counter"
+      },
       "Beacon Capped": {
         "code":"endbeacon",
         "title": "Sleeve Zone",
         "type":"bool"
-},
+      },
       "Circuit Completed": {
         "code":"endcircuit",
         "title": "Circuit Completed",
@@ -163,6 +204,11 @@ var config_data = `
           "x":"Not Attempted"
         },
         "defaultValue":"x"
+      },
+      "Alliance Total Owned Poles": {
+        "code":"endowned",
+        "title": "# of Owned Cones",
+        "type":"counter"
       }
     },
     "postmatch": {
@@ -213,16 +259,16 @@ var config_data = `
         "size":15,
         "maxSize":50
       },
-      "Scouter's Confidence Rating <br>(of this data)": {
+      "Scouter's Accuracy Rating <br>(of this data)": {
         "code":"cnf",
-        "title": "Confidence Rating",
+        "title": "Accuracy Rating",
         "type":"radio",
         "choices":{
-          "v":"Very Confident<br>",
-          "a":"Average<br>",
-          "n":"Not Confident"
+          "v":"Very Good Data<br>",
+          "a":"May Have Missed Some Data<br>",
+          "n":"Missed A Lot Of Data"
       },
-       "defaultValue":"a"
+       "defaultValue":"v"
     }
     }
   }
