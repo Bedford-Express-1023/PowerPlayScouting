@@ -38,7 +38,7 @@ var config_data = `
         "max":100,
         "required":"true"
       },
-      "Robot": {
+      "Robot Assigned": {
         "code":"r",
         "type":"robot",
         "choices":{
@@ -49,15 +49,15 @@ var config_data = `
         },
         "required":"true"
       },
-      "Starting Point<br>(by terminal)": {
+      "Starting Point<br>(alliance-nearest terminal)": {
         "code":"sp",
-        "title": "Starting Point (by terminal)",
+        "title": "Starting Point",
         "type":"radio",
         "choices":{
-          "1":"Red-Red",
-          "2":"Blue-Red<br>",
-          "3":"Red-Blue",
-          "4":"Blue-Blue"
+          "1":"1-Red-Red",
+          "2":"2-Blue-Red<br>",
+          "3":"3-Red-Blue",
+          "4":"4-Blue-Blue"
         },
         "required":"true"
       },
