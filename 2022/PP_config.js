@@ -38,7 +38,7 @@ var config_data = `
         "max":100,
         "required":"true"
       },
-     "Robot": {
+      "Robot": {
         "code":"r",
         "type":"robot",
         "choices":{
@@ -49,7 +49,7 @@ var config_data = `
         },
         "required":"true"
       },
-       "Starting Point<br>(by terminal)": {
+      "Starting Point<br>(by terminal)": {
         "code":"sp",
         "title": "Starting Point (by terminal)",
         "type":"radio",
@@ -152,7 +152,7 @@ var config_data = `
         "title": "Cones: High Junction",
         "type":"counter"
       }
-},
+    },
     "endgame": {
       "Cones: Missed/Dropped": {
         "code":"endcmss",
@@ -224,7 +224,7 @@ var config_data = `
         },
         "defaultValue":"x"
       },
-       "Speed Rating": {
+      "Speed Rating": {
         "code":"sr",
         "title": "Speed Rating",
         "type":"radio",
