@@ -38,26 +38,28 @@ var config_data = `
         "max":100,
         "required":"true"
       },
-      "Robot Assigned": {
+     "Robot Assigned": {
         "code":"r",
         "type":"robot",
         "choices":{
           "r1":"Red-1",
           "b1":"Blue-1<br>",
           "r2":"Red-2",
-          "b2":"Blue-2<br>"
+          "b2":"Blue-2<br>",         
+          "r3":"<s><i>invalid",
+          "b3":"<s><i>invalid"
         },
         "required":"true"
       },
-      "Starting Point<br>(alliance-nearest terminal)": {
-        "code":"sp",
-        "title": "Starting Point",
+      "Auto Start Position": {
+        "code":"as",
+        "title": "Auto Start Position",
         "type":"radio",
         "choices":{
-          "1":"1-Red-Red",
-          "2":"2-Blue-Red<br>",
-          "3":"3-Red-Blue",
-          "4":"4-Blue-Blue"
+          "1":"1-Blue-Alliance / Blue-Terminal<br>",
+          "2":"2-Blue-Alliance / Red-Terminal<br>",
+          "3":"3-Red-Alliance / Blue-Terminal<br>",
+          "4":"4-Red-Alliance / Red-Terminal<br>"
         },
         "required":"true"
       },
@@ -205,7 +207,7 @@ var config_data = `
         },
         "defaultValue":"x"
       },
-      "Alliance Total Owned Poles": {
+      "Alliance Owned Poles & Junctions (Total)": {
         "code":"endowned",
         "title": "# of Owned Cones",
         "type":"counter"
@@ -242,9 +244,14 @@ var config_data = `
         "title": "Had Penalties",
         "type":"bool"
       },
-      "Died/Tipped": {
+      "Non-Functional": {
         "code":"d",
-        "title": "Died/Tipped",
+        "title": "nf",
+        "type":"bool"
+      },
+      "Tipped Over": {
+        "code":"tipped",
+        "title": "Tipped",
         "type":"bool"
       },
       "Make good alliance partner?": {
