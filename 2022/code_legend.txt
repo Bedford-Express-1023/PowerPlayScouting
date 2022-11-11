@@ -1,5 +1,5 @@
 Pre-match page codes:
-s=Scouter Initials
+s=Scouter Name
 e=Event
 l=Match level
 m=Match #
