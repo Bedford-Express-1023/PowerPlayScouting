@@ -61,12 +61,8 @@ var config_data = `
       "Auto Start Position": {
         "code":"as",
         "title": "Auto Start Position",
-        "type":"radio",
-        "choices":{
-          "1":"1-Blue-Alliance / Blue-Terminal<br>",
-          "2":"2-Blue-Alliance / Red-Terminal<br>",
-          "3":"3-Red-Alliance / Blue-Terminal<br>",
-          "4":"4-Red-Alliance / Red-Terminal<br>"}
+        "type":"field_image",
+        "filename":"2022/field_image.png"
 }
     },
     "auton": {
