@@ -14,7 +14,7 @@ var config_data = `
       "Event":{
         "code":"e",
         "type":"event",
-        "defaultValue":"BedfordQualifer",
+        "defaultValue":"BedfordQualifier",
         "required":"true",
         "disabled":"true"
       },
@@ -38,17 +38,24 @@ var config_data = `
         "max":100,
         "required":"true"
       },
-     "Robot Assigned": {
+     "Robot": {
         "code":"r",
         "type":"robot",
         "choices":{
           "r1":"Red-1",
           "b1":"Blue-1<br>",
           "r2":"Red-2",
-          "b2":"Blue-2<br>",         
+          "b2":"Blue-2<br>",
           "r3":"<s><i>invalid",
           "b3":"<s><i>invalid"
         },
+        "required":"true"
+      },
+      "Team #": {
+        "code":"t",
+        "type":"team",
+        "min":1,
+        "max":99999,
         "required":"true"
       },
       "Auto Start Position": {
@@ -59,50 +66,42 @@ var config_data = `
           "1":"1-Blue-Alliance / Blue-Terminal<br>",
           "2":"2-Blue-Alliance / Red-Terminal<br>",
           "3":"3-Red-Alliance / Blue-Terminal<br>",
-          "4":"4-Red-Alliance / Red-Terminal<br>"
-        },
-        "required":"true"
-      },
-      "Team #": {
-        "code":"t",
-        "type":"team",
-        "min":1,
-        "max":99999
-      }
+          "4":"4-Red-Alliance / Red-Terminal<br>"}
+}
     },
     "auton": {
       "Cones: Missed/Dropped": {
-        "code":"autocmss",
+        "code":"acm",
         "title": "Cones: Missed/Dropped",
         "type":"counter"
       },
       "Cones: In Terminal": {
-        "code":"autocit",
+        "code":"act",
         "title": "Cones: In Terminal",
         "type":"counter"
       },
       "Cones: Ground Junction": {
-        "code":"autocgj",
+        "code":"agj",
         "title": "Cones: Ground Junction",
         "type":"counter"
       },
       "Cones: Low Junction": {
-        "code":"autoclj",
+        "code":"alj",
         "title": "Cones: Low Junction",
         "type":"counter"
       },
       "Cones: Medium Junction": {
-        "code":"autocmj",
+        "code":"amj",
         "title": "Cones: Medium Junction",
         "type":"counter"
       },
       "Cones: High Junction": {
-        "code":"autochj",
+        "code":"ahj",
         "title": "Cones: High Junction",
         "type":"counter"
       },
       "Parking Status": {
-        "code":"autoparkstat",
+        "code":"aps",
         "title": "Parking Status",
         "type":"radio",
         "choices":{
@@ -113,91 +112,91 @@ var config_data = `
         "defaultValue":"x"
       },
       "Signal Zone": {
-        "code":"autosignalz",
+        "code":"asz",
         "title": "Signal Zone",
         "type":"bool"
       },
       "Sleeve Zone": {
-        "code":"autosleevez",
+        "code":"asl",
         "title": "Sleeve Zone",
         "type":"bool"
       }
     },
     "teleop": {
       "Cones: Missed/Dropped": {
-        "code":"cmss",
+        "code":"tcm",
         "title": "Cones: Missed/Dropped",
         "type":"counter"
       },
       "Cones: In Terminal": {
-        "code":"cit",
+        "code":"tct",
         "title": "Cones: In Terminal",
         "type":"counter"
       },
       "Cones: Ground Junction": {
-        "code":"cgj",
+        "code":"tgj",
         "title": "Cones: Ground Junction",
         "type":"counter"
       },
       "Cones: Low Junction": {
-        "code":"clj",
+        "code":"tlj",
         "title": "Cones: Low Junction",
         "type":"counter"
       },
       "Cones: Medium Junction": {
-        "code":"cmj",
+        "code":"tmj",
         "title": "Cones: Medium Junction",
         "type":"counter"
       },
       "Cones: High Junction": {
-        "code":"chj",
+        "code":"thj",
         "title": "Cones: High Junction",
         "type":"counter"
       }
     },
     "endgame": {
       "Cones: Missed/Dropped": {
-        "code":"endcmss",
+        "code":"ecm",
         "title": "Cones: Missed/Dropped",
         "type":"counter"
       },
       "Cones: In Terminal": {
-        "code":"endcit",
+        "code":"ect",
         "title": "Cones: In Terminal",
         "type":"counter"
       },
       "Cones: Ground Junction": {
-        "code":"endcgj",
+        "code":"egj",
         "title": "Cones: Ground Junction",
         "type":"counter"
       },
       "Cones: Low Junction": {
-        "code":"endclj",
+        "code":"elj",
         "title": "Cones: Low Junction",
         "type":"counter"
       },
       "Cones: Medium Junction": {
-        "code":"endcmj",
+        "code":"emj",
         "title": "Cones: Medium Junction",
         "type":"counter"
       },
       "Cones: High Junction": {
-        "code":"endchj",
+        "code":"ehj",
         "title": "Cones: High Junction",
         "type":"counter"
       },
       "Beacon Capped": {
-        "code":"endbeacon",
+        "code":"ebc",
         "title": "Sleeve Zone",
         "type":"bool"
       },
       "Circuit Completed": {
-        "code":"endcircuit",
+        "code":"ecc",
         "title": "Circuit Completed",
         "type":"bool"
       },
       "Parking Status": {
-        "code":"endparkstat",
+        "code":"eps",
         "title": "Parking Status",
         "type":"radio",
         "choices":{
@@ -208,7 +207,7 @@ var config_data = `
         "defaultValue":"x"
       },
       "Alliance Owned Poles & Junctions (Total)": {
-        "code":"endowned",
+        "code":"epj",
         "title": "# of Owned Cones",
         "type":"counter"
       }
@@ -245,17 +244,17 @@ var config_data = `
         "type":"bool"
       },
       "Non-Functional": {
-        "code":"d",
+        "code":"nf",
         "title": "nf",
         "type":"bool"
       },
       "Tipped Over": {
-        "code":"tipped",
+        "code":"to",
         "title": "Tipped",
         "type":"bool"
       },
       "Make good alliance partner?": {
-        "code":"all",
+        "code":"ap",
         "title": "Make good alliance partner?",
         "type":"bool"
       },
@@ -267,7 +266,7 @@ var config_data = `
         "maxSize":50
       },
       "Scouter's Accuracy Rating <br>(of this data)": {
-        "code":"cnf",
+        "code":"sar",
         "title": "Accuracy Rating",
         "type":"radio",
         "choices":{

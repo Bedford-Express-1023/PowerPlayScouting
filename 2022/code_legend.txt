@@ -1,0 +1,49 @@
+Pre-match page codes:
+s=Scouter Initials
+e=Event
+l=Match level
+m=Match #
+r=Robot
+t=Team #
+as=Auto Start Position
+
+Auton page codes:
+acm=Cones: Missed/Dropped
+act=Cones: In Terminal
+agj=Cones: Ground Junction
+alj=Cones: Low Junction
+amj=Cones: Medium Junction
+ahj=Cones: High Junction
+aps=Parking Status
+asz=Signal Zone
+asl=Sleeve Zone
+
+Teleop page codes:
+tcm=Cones: Missed/Dropped
+tct=Cones: In Terminal
+tgj=Cones: Ground Junction
+tlj=Cones: Low Junction
+tmj=Cones: Medium Junction
+thj=Cones: High Junction
+
+End game page codes:
+ecm=Cones: Missed/Dropped
+ect=Cones: In Terminal
+egj=Cones: Ground Junction
+elj=Cones: Low Junction
+emj=Cones: Medium Junction
+ehj=Cones: High Junction
+ebc=Beacon Capped
+ecc=Circuit Completed
+eps=Parking Status
+epj=Alliance Owned Poles & Junctions (Total)
+
+Post match page codes:
+ds=Driver Skill
+sr=Speed Rating
+hp=Had Penalties
+nf=Non-Functional
+to=Tipped Over
+ap=Make Good Aliance Partner
+co=Comments
+sar=Scouter's Accuracy Rating
