@@ -1,5 +1,5 @@
 Pre-match page codes:
-s=Scouter Name
+s=Scouter Initials
 e=Event
 l=Match level
 m=Match #
@@ -36,14 +36,10 @@ ehj=Cones: High Junction
 ebc=Beacon Capped
 ecc=Circuit Completed
 eps=Parking Status
-epj=Alliance Owned Poles & Junctions (Total)
 
 Post match page codes:
-ds=Driver Skill
-sr=Speed Rating
 hp=Had Penalties
 nf=Non-Functional
 to=Tipped Over
-ap=Make Good Aliance Partner
 co=Comments
 sar=Scouter's Accuracy Rating

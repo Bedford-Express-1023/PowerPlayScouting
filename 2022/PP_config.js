@@ -4,11 +4,11 @@ var config_data = `
   "page_title":"FTC Power Play",
   "elements":{
     "prematch": {
-      "Scouter Name": {
+      "Scouter Initials": {
         "code":"s",
         "type":"scouter",
-        "size":5,
-        "maxSize":5,
+        "size":10,
+        "maxSize":10,
         "required":"true"
       },
       "Event":{
@@ -22,11 +22,10 @@ var config_data = `
         "code":"l",
         "type":"level",
         "choices":{
-          "qm":"Quals<br>",
-          "ef":"Eighth-Final<br>",
-          "qf":"Quarter-Final<br>",
-          "sf":"Semi-Final<br>",
-          "f":"Final"
+          "qm":"Qualification<br>",
+          "qf":"Elimination: Quarter-Final<br>",
+          "sf":"Elimination: Semi-Final<br>",
+          "f":"Elimination: Final"
         },
         "defaultValue":"qm",
         "required":"true"
@@ -200,40 +199,9 @@ var config_data = `
           "s":"Substation<br>",
           "x":"Not Attempted"
         },
-        "defaultValue":"x"
-      },
-      "Alliance Owned Poles & Junctions (Total)": {
-        "code":"epj",
-        "title": "# of Owned Cones",
-        "type":"counter"
-      }
+        "defaultValue":"x"}
     },
     "postmatch": {
-      "Driver Skill": {
-        "code":"ds",
-        "title": "Driver Skill",
-        "type":"radio",
-        "choices":{
-          "n":"Not Effective<br>",
-          "a":"Average<br>",
-          "v":"Very Effective<br>",
-          "x":"Not Observed"
-        },
-        "defaultValue":"x"
-      },
-      "Speed Rating": {
-        "code":"sr",
-        "title": "Speed Rating",
-        "type":"radio",
-        "choices":{
-          "1":"1 (slow)<br>",
-          "2":"2<br>",
-          "3":"3<br>",
-          "4":"4<br>",
-          "5":"5 (fast)"
-        },
-        "defaultValue":"3"
-      },
       "Had Penalties": {
         "code":"hp",
         "title": "Had Penalties",
@@ -249,11 +217,6 @@ var config_data = `
         "title": "Tipped",
         "type":"bool"
       },
-      "Make good alliance partner?": {
-        "code":"ap",
-        "title": "Make good alliance partner?",
-        "type":"bool"
-      },
       "Comments": {
         "code":"co",
         "title": "Comments",
@@ -266,11 +229,10 @@ var config_data = `
         "title": "Accuracy Rating",
         "type":"radio",
         "choices":{
-          "v":"Very Good Data<br>",
-          "a":"May Have Missed Some Data<br>",
-          "n":"Missed A Lot Of Data"
-      },
-       "defaultValue":"v"
+          "good":"Very Good Data<br>",
+          "miss":"May Have Missed Some Data"
+       },
+       "defaultValue":"good"
     }
     }
   }
