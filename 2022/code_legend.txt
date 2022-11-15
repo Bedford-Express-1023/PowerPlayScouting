@@ -8,6 +8,7 @@ t=Team #
 as=Auto Start Position
 
 Auton page codes:
+acs=Used Custom Signal Sleeve
 acm=Cones: Missed/Dropped
 act=Cones: In Terminal
 agj=Cones: Ground Junction
@@ -15,8 +16,6 @@ alj=Cones: Low Junction
 amj=Cones: Medium Junction
 ahj=Cones: High Junction
 aps=Parking Status
-asz=Signal Zone
-asl=Sleeve Zone
 
 Teleop page codes:
 tcm=Cones: Missed/Dropped

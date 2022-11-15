@@ -65,6 +65,11 @@ var config_data = `
 }
     },
     "auton": {
+      "Used Custom Signal Sleeve": {
+        "code":"acs",
+        "title": "Used Custom Signal Sleeve",
+        "type":"bool"
+      },
       "Cones: Missed/Dropped": {
         "code":"acm",
         "title": "Cones: Missed/Dropped",
@@ -100,21 +105,12 @@ var config_data = `
         "title": "Parking Status",
         "type":"radio",
         "choices":{
+          "z":"Sleeve Zone<br>",
           "t":"Terminal<br>",
           "s":"Substation<br>",
           "x":"Not Attempted"
         },
         "defaultValue":"x"
-      },
-      "Signal Zone": {
-        "code":"asz",
-        "title": "Signal Zone",
-        "type":"bool"
-      },
-      "Sleeve Zone": {
-        "code":"asl",
-        "title": "Sleeve Zone",
-        "type":"bool"
       }
     },
     "teleop": {
