@@ -4,7 +4,7 @@ var config_data = `
   "page_title":"FTC Power Play",
   "elements":{
     "prematch": {
-      "Scouter Initials": {
+      "Scouter Name": {
         "code":"s",
         "type":"scouter",
         "size":10,
